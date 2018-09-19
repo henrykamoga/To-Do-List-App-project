@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/css/main.css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/typed.min.js"></script>
+<script src="../static/js/main.js"></script>
+
+</head>
+<body>
+    <div id="Main-container"> 
+        <div class="content">
+            <div id="To_do_List_Div"><p class="To_Do_list_title" >My To Do</p></div><br>
+            <table align="left"  >
+                <tr>
+                    <td><button class="Profile-Log-out-button">Log out </button></td>
+                </tr>
+            </table>
+            <div class="col-6 col-s-9">
+            <table align="right"  >
+                <tr>
+                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">About  </button></td>
+                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">Register </button></td>
+                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
+                </tr>
+            </table>
+        </div>
+                <div class="columu-3 columu-s-3">
+                        
+                    <img src="../static/img/profile/pic.png" class="profile_pic">
+                </div>
+
+                <div class="columu-3 columu-s-12">
+                    <p class="profile-Description-Area">
+                    <label class="user-profile-name">Kamoga henry</label><br><br>
+                    profile details profile details profile details profile details
+                    </p>
+                </div><br><br>
+            <table>
+                <tr>
+                    <td>
+                        <p class="Select-your-operation-label">
+                            Select your operation
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <!-- operations start... -->
+            <button class="accordion"><label class="labels">Create item list</label></button>
+            <div class="panel"><br>
+                <form >
+                    <label class="Form-items-input-labels" >List Name</label>
+                    <input type="text" id="user_name" name="firstname" required placeholder="your list name">
+
+                    <label for="password" class="Form-items-input-labels">Item Items</label>
+                    <input type="text" id="password" name="lastname"  required placeholder="your items">
+
+                    <br><br>
+                <center>
+                    <button class="Form-items-buttons" onclick="Load_profile_page ()">Creat </button>
+                    <p style="color: white;">iii</p>
+                </center>
+                </form>
+            </div>
+
+            <button class="accordion"><label class="labels">View items list</label></button>
+            <div class="panel">
+                <center>
+                    <button class="Form-items-buttons" onclick="Load_profile_page ()">View items </button>
+                </center>
+                <label class="Form-items-input-labels" >List Name</label><br>
+                <label class="Form-items-input-labels" >Items</label>
+            </div>
+
+            <button class="accordion"><label class="labels">Delete item</label></button>
+            <div class="panel">
+                <label class="Form-items-input-labels" >List Name</label><br>
+                <label class="Form-items-input-labels" >Items</label>
+                <center>
+                        <button class="Form-items-buttons" onclick="Load_profile_page ()">Delete </button>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div>
+
+            <button class="accordion"><label class="labels">Empty the list</label></button>
+            <div class="panel">
+                    <label class="Form-items-input-labels" >List Name</label><br>
+                    <label class="Form-items-input-labels" >Items</label>
+
+                    <center>
+                        <button class="Form-items-buttons" onclick="Load_profile_page ()">Delete all </button>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div>  
+            </div>
+        </div>
+    </div>
+<script>
+    var Accordion = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < Accordion.length; i++)
+    {
+        Accordion[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
+    }
+
+    function Load_index_page()
+        {
+            window.location="index.html"
+        }
+
+
+
+var typed = new Typed(".type-wrap", {
+    stringsElement: '#type_my_strings',
+    typeSpeed: 100,
+    backSpeed: 0,
+    loop:true,
+    //startDelay:1000,
+
+    //shuffle: false,
+    fadeOut: false,
+    fadeOutClass: 'typed-fade-out',
+    fadeOutDelay: 500,
+    
+  });
+
+    </script>
+</body>
+</html>
