@@ -18,16 +18,18 @@
                 <tr>
                     <td><button class="Profile-Log-out-button">Log out </button></td>
                 </tr>
+            
             </table>
+            <!-- div tag of navigetion buttons -->
             <div class="col-6 col-s-9">
-            <table align="right"  >
-                <tr>
-                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">About  </button></td>
-                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">Register </button></td>
-                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
-                </tr>
-            </table>
-        </div>
+                <table align="right"  >
+                    <tr>
+                        <td  align="right" ><button class="Register-button" onclick="Load_about_page()">About  </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_register_page()">Register </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
+                    </tr>
+                </table>
+            </div> <!-- end of div tag of navigetion buttons -->
                 <div class="columu-3 columu-s-3">
                         
                     <img src="static/img/profile/pic.png" class="profile_pic">
@@ -39,40 +41,33 @@
                     profile details profile details profile details profile details
                     </p>
                 </div><br><br>
-            <table>
-                <tr>
-                    <td>
-                        <p class="Select-your-operation-label">
-                            Select your operation
-                        </p>
-                    </td>
-                </tr>
-            </table>
             <!-- operations start... -->
-            <button class="accordion"><label class="labels">Create item list</label></button>
+            <button class="accordion" onclick=" Store_User_data()"><label class="labels">Create item list</label></button>
             <div class="panel"><br>
                 <form >
                     <label class="Form-items-input-labels" >List Name</label>
-                    <input type="text" id="user_name" name="firstname" required placeholder="your list name">
+                    <input type="text" id="list_name" required placeholder="your list name">
 
                     <label for="password" class="Form-items-input-labels">Item Items</label>
-                    <input type="text" id="password" name="lastname"  required placeholder="your items">
+                    <input type="text" id="item_name"   required placeholder="your items">
 
                     <br><br>
                 <center>
-                    <button class="Form-items-buttons" onclick="Load_profile_page ()">Creat </button>
+                    <button class="Form-items-buttons" onclick="Store_User_data()">Creat </button>
                     <p style="color: white;">iii</p>
                 </center>
                 </form>
             </div>
 
             <button class="accordion"><label class="labels">View items list</label></button>
-            <div class="panel">
+            <div class="panel"><br>
                 <center>
-                    <button class="Form-items-buttons" onclick="Load_profile_page ()">View items </button>
+                    <button class="Form-items-buttons" onclick="Get_user_Data ()">View items </button>
                 </center>
                 <label class="Form-items-input-labels" >List Name</label><br>
+                <div id="list_name_2_display"></div>
                 <label class="Form-items-input-labels" >Items</label>
+                <div id="items_name_2_display"></div>
             </div>
 
             <button class="accordion"><label class="labels">Delete item</label></button>
@@ -115,11 +110,19 @@
       }
     }
 
-    function Load_index_page()
-        {
-            window.location="index.html"
-        }
+function Load_index_page()
+    {
+        window.location="index.html"
+    }
+function Load_register_page()
+{
+    window.location="register.html"
+}
 
+function Load_about_page()
+{
+    window.location="about.html"
+}
 
 
 var typed = new Typed(".type-wrap", {
@@ -135,6 +138,45 @@ var typed = new Typed(".type-wrap", {
     fadeOutDelay: 500,
     
   });
+
+function Store_User_data()
+{
+
+/*get input....*/
+document.getElementById("lists_name");
+document.getElementById("item_name");
+
+/*obj to store txt */
+var  Store_list_name = list_name.value;
+var  Store_item_name = item_name.value;
+
+/*store the values */
+localStorage.setItem("List_name", Store_list_name);
+localStorage.setItem("Item_name",Store_item_name);
+
+}
+
+
+function Get_user_Data ()
+{
+      /*get user data ...*/
+    var   Stored_item_name = localStorage.getItem("Item_name");
+    var  Stored_list_name  = localStorage.getItem("List_name");
+
+    
+
+    console.log(Stored_item_name)
+    console.log(Stored_list_name)
+
+    var item_name = document.getElementById("Stored_item_name ");
+    var list_name = document.getElementById("Stored_list_name");
+
+    // get the area to display in the data
+    document.getElementById("list_name_2_display").innerHTML = list_name; 
+    // document.getElementById("item_name_2_display").innerHTML = item_name; 
+}
+
+ 
 
     </script>
 </body>

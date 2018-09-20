@@ -13,21 +13,28 @@
     <div id="Main-container">
         <div class="content">
             <div id="To_do_List_Div"><p class="To_Do_list_title" >My To Do</p></div><br>
-            <table align="right"  >
-                <tr>
-                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">Home </button></td>
-                </tr>
-            </table><br>
+            <div class="col-6 col-s-9">
+                <table align="right"  >
+                    <tr>
+                        <td  align="right" ><button class="Register-button" onclick="Load_about_page()">About  </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_register_page()">Register </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
+                    </tr>
+                </table>
+            </div> <!-- end of div tag of navigetion buttons -->
+            <!-- Typing area div -->
             
             <table>
                 <tr>
                     <td>
                         <div id="type_my_strings">
-                            <p>Please log in first !!!</p>
-                            <p>Use your registered user name </p>
-                            <p>and password created.</p>
+                            <p>Please log in !!!</p>
+                            <p>Use your registered 
+                            <p> user name and  </p>
+                            <p> password created.</p>
                             <p>__OR__</p>
-                            <p>Create Account now....</p>
+                            <p>Create Account</p>
+                            <p> now...</p>
                             
                         </div>
                         
@@ -36,6 +43,7 @@
                     </td>
                 </tr>
             </table>
+            
             
             
                 <div id="Log-in-form">
@@ -69,7 +77,10 @@
     {
         window.location="index.html"
     }
-
+    function Load_about_page()
+{
+    window.location="about.html"
+}
 
 
 var typed = new Typed(".type-wrap", {

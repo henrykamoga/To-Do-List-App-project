@@ -15,7 +15,9 @@
             <div id="To_do_List_Div"><p class="To_Do_list_title" >My To Do</p></div> <br>
             <table align="right"  >
                 <tr>
-                    <td  align="right" ><button class="Register-button" onclick="Load_index_page()">Home </button></td>
+                    <td  align="right" ><button class="Register-button" onclick="Load_about_page()">About  </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_register_page()">Register </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
                 </tr>
             </table>
             
@@ -24,9 +26,10 @@
                 <tr>
                     <td>
                             <div id="type_my_strings">
-                                <p> Creating User Account ... </p>
-                                <p>The user name and password</p>
-                                <p>Will be used when loging in</p>
+                                <p> Creat User Account </p>
+                                <p>The user name and </p>
+                                <p>password Will be </p>
+                                <p>used when loging in</p>
                                 <p>__OR__</p>
                                 <p>Log in now....</p>
                             </div>
@@ -47,7 +50,7 @@
                     <input type="password" id="password" name="lastname" required placeholder="*******">
 
                     <label for="confirm-password" class="labels">Confirm Password</label>
-                    <input type="password" id="password" name="lastname" required placeholder="*******">
+                    <input type="password" id="Confirmpassword" name="lastname" required placeholder="*******">
 
                     <br><br>
                     <button class="Log-in-button">Done </button>
@@ -64,9 +67,14 @@ function Load_index_page()
 {
     window.location="index.html"
 }
-function Load_LogIn_page()
+function Load_register_page()
 {
-    window.location="index.html"
+    window.location="register.html"
+}
+
+function Load_about_page()
+{
+    window.location="about.html"
 }
 
 
@@ -83,6 +91,8 @@ var typed = new Typed(".type-wrap", {
     fadeOutDelay: 500,
     
   });
+
+
 </script>
 </body>
 </html>
