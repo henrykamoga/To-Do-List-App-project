@@ -172,14 +172,6 @@ input[type=text],input[type=password] {
     /* =================================== */
 
 
-.profile_pic
-{
-    border-radius: 50%;
-    margin-left: -100px;
-    margin-top: 60px;
-}
-
-
 
 
 .Profile-Log-out-button
@@ -224,7 +216,7 @@ input[type=text],input[type=password] {
 .profile_pic
 {
     border-radius: 50%;
-    /* margin-left: -40px; */
+    margin-left: -65px;
     margin-top: 50px;
 }
 
@@ -347,19 +339,6 @@ div.panel {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media typs */
 
 [class*="columu-"] {
@@ -373,44 +352,6 @@ div.panel {
     width: 100%;
 }
 
-
-/* @media only screen and (min-width:280px)
-{
-    .profile_pic
-    {
-        border-radius: 50%;
-        margin-left: -20px;
-        margin-top: 20px;
-    }
-
-} */
-
-/*  
-     When the window is of phone size
-*/
- /* @media only screen and (max-width: 600px) 
-{
-    /* on the profile icone in profile page */
-    .profile_pic
-    /* {
-        border-radius: 50%;
-        margin-left: -20px;
-        margin-top: 20px;
-    } */
-    /* on the profile-Description-Area in profile page  */
-    
-    /* .profile-Description-Area
-    {
-        background-color: #ddd;
-        width: 253px;
-        height: 150px;
-        border-radius: 10px;
-        text-align: center;
-        padding: 10px 10px 10px 10px;
-        margin-left: -9px;
-    } */
-
-}  */
 
 @media only screen and (min-width: 600px) {
     /* For tablets: */
