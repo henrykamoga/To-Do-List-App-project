@@ -210,14 +210,7 @@ input[type=text],input[type=password] {
     border-radius: 10px;
     text-align: center;
     padding: 10px 10px 10px 10px;
-    margin-left: -50px;
-}
-
-.profile_pic
-{
-    border-radius: 50%;
-    margin-left: -65px;
-    margin-top: 50px;
+    margin:auto;
 }
 
 .Form-items-input-labels 
