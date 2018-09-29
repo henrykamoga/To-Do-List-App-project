@@ -1,0 +1,17 @@
+
+language: python
+
+python:
+- "3.6.6" 
+
+
+install:
+# - pip install -r requirements.txt
+- pip install coveralls
+
+script:
+
+- python -m unittest -v test_validation
+
+after_success:
+- coveralls
