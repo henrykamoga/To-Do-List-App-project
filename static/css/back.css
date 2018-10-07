@@ -1,0 +1,341 @@
+
+@media only screen and (min-width:600px)
+{
+    body{background-color: red}
+}
+
+body
+{
+    background: #555;
+}
+
+.content
+{
+    max-width: 500px;
+    margin: auto;
+    background:#5F9EA0;;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Log in page */
+/* ============================== */
+
+#Left_div
+{
+    float: left;
+    width:350px;
+    height: 500px;
+    background-color: red;
+
+}
+input[type=text],input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.Log-in-button
+{
+    background-color:#228B22;
+    border:none;
+    width:100%;
+    height:45px;
+    border-radius:18px;
+    
+    font-size: 20px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+}
+.Log-in-button:hover {
+    background-color: #45a049;
+}
+
+#Log-in-form
+{
+    border-radius: 25px;
+    background-color: 	#ADD8E6;
+    padding: 20px;
+    width:inherit;
+   
+}
+.Log_in_avatar
+{
+    width:25%; 
+    height:60px;
+    border-radius: 50%;
+    margin-left:10px;
+    margin-right:0px;
+    margin-bottom: 10px;
+}
+
+.log_in_warning_lable
+{
+    color: 	#B22222;
+    font-size: 25px;
+    font-weight:bold;
+    background-color: #E6E6FA;
+    font-family:Times New Roman Times, serif;
+}
+
+.log_in_or
+{
+    color: 	#B22222;
+    font-size: 23px;
+    font-weight:bold;
+   
+    font-family:Times New Roman Times, serif;
+}
+
+.account_label
+{
+    color: blue;
+    font-variant: unset;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family:Times New Roman Times, serif;
+}
+.Horizontal_line
+{
+    color: blue;
+    background-color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Register page */
+/* ================================================ */
+.Register-button
+{
+    background-color:blue;
+    border:none;
+    width:100%;
+    height:45px;
+    border-radius:18px;
+    
+    font-size: 20px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+
+}
+
+.Register-button:hover
+{background-color: #228B22;}
+#To_do_List_Div
+{
+    height: 50px;
+    width: inherit;
+    margin-top: -30px;
+    border-radius: 20px;
+    background-color:#FFD700;//#FF8C00;
+}
+
+.To_Do_list_title
+    {
+        
+        color: blue;
+        font-variant: small-caps;
+        text-align: center;
+        
+        font-size: 30px;
+        font-family:Times New Roman Times, serif;
+    }
+    .labels /* also on profile page */
+    {
+        color: blue;
+        font-variant: unset;
+        font-weight: bolder;
+        font-size: 19px;
+        font-family:Times New Roman Times, serif;
+    }
+
+
+
+
+    /* profifle page */
+    /* =================================== */
+
+
+.profile_pic
+{
+    border-radius: 50%;
+}
+
+
+.profile-Description-Area
+{
+    background-color: #ddd;
+    width: 255px;
+    height: 150px;
+    border-radius: 10px;
+    /* text-align: center; */
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.Profile-Log-out-button
+{
+    background-color:#A52A2A;
+    border:none;
+    width:100%;
+    height:45px;
+    border-radius:18px;
+    
+    font-size: 20px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+
+}
+.Profile-Log-out-button:hover
+{
+    background-color: red;
+}
+
+.user-profile-name
+{
+    color: blue;
+    font-size: 19px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    cursor: pointer;
+}
+
+.Select-your-operation-label
+{
+    color:red;
+    font-size: 19px;
+    background-color: #ADD8E6;
+    border-radius: 50px;
+    font-family:Times New Roman Times, serif;
+    cursor: pointer;
+
+}
+.Select-your-operation-label:hover
+{
+    background-color: yellow;
+}
+
+
+.Form-items-input-labels 
+    {
+        color: blue;
+        font-variant: unset;
+        /* font-weight:b */
+        font-size: 15px;
+        font-family:Times New Roman Times, serif;
+    }
+.Form-items-buttons
+{
+    background-color:#228B22;
+    border:none;
+    width:30%;
+    height:40px;
+    border-radius:18px;
+    
+    font-size: 20px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+}
+
+.Form-items-buttons:hover
+{
+    background-color: blue;
+}
+button.accordion {
+    background-color: #eee;
+    color:blue;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+button.accordion:after {
+    content: '\002B';
+    float: right;
+    margin-left: 5px;
+    color: blue;
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    
+}
+
+button.accordion.active:after {
+    content: "\2212";
+    color: blue;
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/* typing animetion */
+/* ============================= */
+.type-wrap{   
+    background-color: white;
+    /* color: #05849E; */
+    color: red;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0px 15px;
+    height: 40px;
+    line-height: 40px;
+    font-family:Times New Roman Times, serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

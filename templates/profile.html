@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/main.css">
+
+</head>
+<body>
+    <div id="Main-container"> 
+        <div class="content">
+            <div id="To_do_List_Div"><p class="To_Do_list_title" >My To Do</p></div><br>
+            <table align="left"  >
+                <tr>
+                    <td><button class="Profile-Log-out-button" onclick="Load_index_page()">Log out </button></td>
+                    <!-- <td><button class="Profile-Log-out-button">Status </button></td> -->
+                </tr>
+            
+            </table>
+            <!-- div tag of navigetion buttons -->
+            <div class="col-6 col-s-9">
+                <table align="right"  >
+                    <tr>
+                        <td  align="right" ><button class="Register-button" onclick="Load_register_page()">Register </button></td>
+                        <td  align="right" ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
+                    </tr>
+                </table>
+            </div> <!-- end of div tag of navigetion buttons -->
+            <br> <br>
+                <div class="columu-3 columu-s-12">
+                    <p class="profile-Description-Area">
+                    <label class="user-profile-name">Kamoga henry</label><br><br>
+                    profile details profile details profile details profile details
+                    </p>
+                </div><br><br>
+            <!-- operations start... -->
+
+            <!-- =========================================================================== -->
+            <button class="accordion" onclick=" Store_User_data()"><label class="labels">Create a task</label></button>
+            <div class="panel"><br>
+                <form action="create_task" method="POST">
+                    <label class="Form-items-input-labels" >Task Name</label>
+                    <input type="text"  name="task_name" required placeholder="your list name">
+
+                    <label for="password" class="Form-items-input-labels">Item Items</label>
+                    <input type="text" name="item_name"   required placeholder="your items">
+
+                    <br><br>
+                <center>
+                    <button class="Form-items-buttons" onclick="Store_User_data()">Creat </button>
+                    <p style="color: white;">iii</p>
+                </center>
+                </form>
+            </div>
+
+            <!-- =========================================================================== -->
+            <button class="accordion"><label class="labels">View tasks</label></button>
+            <div class="panel"><br>
+                <center>
+                    <a href="view_tasks">
+                    <button class="Form-items-buttons">View items </button>
+                    </a>
+                </center>
+                <label class="Form-items-input-labels" >List Name</label><br>
+                <div id="list_name_2_display"></div>
+                <label class="Form-items-input-labels" >Items</label>
+                <div id="items_name_2_display"></div>
+            </div>
+
+            <!-- =========================================================================== -->
+            <button class="accordion"><label class="labels">Delete item</label></button>
+            <div class="panel">
+                <center>
+                        <button class="Form-items-buttons" onclick="Load_profile_page ()">Delete </button>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div>
+
+            <!-- =========================================================================== -->
+            <button class="accordion"><label class="labels">Delete a task</label></button>
+            <div class="panel">
+                    <center>
+                        <a href="delete_all_tasks">
+                            <button class="Form-items-buttons">
+                                Delete all tasks
+                            </button>
+                        </a>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div>  
+
+            <!-- =========================================================================== -->
+            <button class="accordion"><label class="labels">Mark a task finished</label></button>
+            <div class="panel">
+                    <label class="Form-items-input-labels" >List Name</label><br>
+                    <label class="Form-items-input-labels" >Items</label>
+
+                    <center>
+                        <button class="Form-items-buttons" onclick="Load_profile_page ()">Delete all </button>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div> 
+            <!-- =========================================================================== -->
+            <button class="accordion"><label class="labels">Recover deleted task</label></button>
+            <div class="panel">
+                    <label class="Form-items-input-labels" >List Name</label><br>
+                    <label class="Form-items-input-labels" >Items</label>
+
+                    <center>
+                        <button class="Form-items-buttons" onclick="Load_profile_page ()">Delete all </button>
+                        <p style="color: white;">iii</p>
+                    </center>
+            </div> 
+
+            </div>
+        </div>
+    </div>
+<script>
+    var Accordion = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < Accordion.length; i++)
+    {
+        Accordion[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
+    }
+
+function Load_index_page()
+    {
+        window.location="index"
+    }
+function Load_register_page()
+{
+    window.location="register"
+}
+
+function Load_about_page()
+{
+    window.location="about.html"
+}
+
+
+var typed = new Typed(".type-wrap", {
+    stringsElement: '#type_my_strings',
+    typeSpeed: 100,
+    backSpeed: 0,
+    loop:true,
+    //startDelay:1000,
+
+    //shuffle: false,
+    fadeOut: false,
+    fadeOutClass: 'typed-fade-out',
+    fadeOutDelay: 500,
+    
+  });
+
+function Store_User_data()
+{
+
+/*get input....*/
+document.getElementById("lists_name");
+document.getElementById("item_name");
+
+/*obj to store txt */
+var  Store_list_name = list_name.value;
+var  Store_item_name = item_name.value;
+
+/*store the values */
+localStorage.setItem("List_name", Store_list_name);
+localStorage.setItem("Item_name",Store_item_name);
+
+}
+
+
+function Get_user_Data ()
+{
+      /*get user data ...*/
+    var   Stored_item_name = localStorage.getItem("Item_name");
+    var  Stored_list_name  = localStorage.getItem("List_name");
+
+    
+
+    console.log(Stored_item_name)
+    console.log(Stored_list_name)
+
+    var item_name = document.getElementById("Stored_item_name ");
+    var list_name = document.getElementById("Stored_list_name");
+
+    // get the area to display in the data
+    document.getElementById("list_name_2_display").innerHTML = list_name; 
+    // document.getElementById("item_name_2_display").innerHTML = item_name; 
+}
+
+ 
+
+    </script>
+</body>
+</html>

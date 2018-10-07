@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Log in</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="static/css/main.css">
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/typed.min.js"></script>
+<script src="static/js/main.js"></script>
+
+</head>
+<body>
+    <div id="Main-container">
+        <div class="content">
+            <div id="To_do_List_Div"><p class="To_Do_list_title" >My To Do</p></div><br>
+            <div class="col-6 col-s-9">
+                <td><img src="static/img/index/login.png" class="Activity_icone"></td>
+
+                <table align="right"  >
+                    <tr>
+                        <td  ><button class="Register-button" onclick="Load_register_page()">Register </button></td>
+                        <td  ><button class="Register-button" onclick="Load_index_page()"> Log in</button></td>
+                    </tr>
+                </table>
+            </div> <!-- end of div tag of navigetion buttons -->
+            <br>
+           
+
+                <div id="Log-in-form">
+                    <center><img src="static/img/index/avatar.png" class="Log_in_avatar"></center>
+                    <form action="user_log_in" method="POST" >
+                        <label for="user_name" class="labels" >User Name</label>
+                        <input type="text" id="user_name" name="user_name" required placeholder="Registered Name">
+
+                        <label for="password" class="labels">Password</label>
+                        <input type="password" name="user_password" required placeholder="*******">
+
+                    <br>
+                    
+                    <button class="Log-in-button" type="submit" >Log in </button>
+                </form>
+                    <center><p> <label class="log_in_or">OR</label> <br> <hr class="Horizontal_line">
+                    
+                    <label onclick="Load_register_page()" class="account_label">Create Account</label></p></center>
+
+                </div>
+        </div>
+    </div> 
+<script>
+    function Load_register_page() 
+    {
+        window.location="register"
+    }
+    function Load_profile_page ()
+    {
+        window.location="profile"
+    }
+    function Load_index_page()
+    {
+        window.location="index"
+    }
+</script>
+</body>
+</html>
